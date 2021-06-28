@@ -21,16 +21,16 @@ public class Main {
             thread.join();
         }
 
-        for (Integer evenNumber : OrderMatic.getEvenNumbers()) {
-            System.out.print(evenNumber + ", ");
-        }
-        System.out.println();
-        for (Integer oddNumber : OrderMatic.getOddNumbers()) {
-            System.out.print(oddNumber + ", ");
-        }
+        OrderMatic.getOddNumbers().forEach(i-> System.out.print(i + ", "));
 
         System.out.println();
+
+        OrderMatic.getEvenNumbers().forEach(i-> System.out.print(i + ", "));
+
+        System.out.println();
+
         System.out.println("Even size : " + OrderMatic.getEvenNumbers().size());
+
         System.out.println("Odd size : " + OrderMatic.getOddNumbers().size());
 
     }
